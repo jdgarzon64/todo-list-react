@@ -1,24 +1,27 @@
 .todo-search {
-    background: #F9FBFC;
-    border-radius: 2px;
-    border: 2px solid #202329;
-    margin: 0 24px;
-    height: 64px;
-    width: calc(100% - 62px);
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    color: #1E1E1F;
+    background: navajowhite;
+    border-radius: 50px;
+    border: 2px solid coral;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    color: tomato;
+    font-size: 30px;
+    font-weight: bold;
+    height: 64px;
+    margin: 0 24px;
+    text-align: center;
+    width: calc(100% - 62px);
+    font-family: 'Permanent Marker', cursive;
   }
   
   .todo-search::placeholder {
-    color: #A5A5A5;
-    font-family: 'Montserrat';
+    color: tomato;
+    font-family: 'Permanent Marker', cursive;
     font-weight: 400;
+    opacity: 30%;
   }
   
   .todo-search:focus {
-    outline-color: #61DAFA;
+    outline-style: solid;
+    outline-color: cornsilk;
+    border-color: cornsilk;
   }

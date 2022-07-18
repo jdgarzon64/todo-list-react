@@ -1,11 +1,20 @@
+import React from 'react';
+
+import { TodoContext } from '../../todoContext';
 import './TodoList.css';
 
 function TodoList(props) {
+    const { totalTodos } = React.useContext(TodoContext);
+
     return (
         <section>
-            <ul className="todo-list">
-                {props.children}
-            </ul>
+            {(
+                totalTodos > 0 ?
+                <ul className="todo-list">
+                    {props.children}
+                </ul>
+                : null
+            )}
         </section>
     );
 }

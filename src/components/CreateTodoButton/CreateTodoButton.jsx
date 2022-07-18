@@ -3,13 +3,14 @@ import './CreateTodoButton.css';
 
 function CreateTodoButton(props) {
     const message = 'Modal Abierto';
-    const onClickButton = (msg) => {
-        alert(msg);
+    const onClickButton = () => {
+        console.log(props);
+        props.setOpenModal(openModal => !openModal);
     };
     return (
         <button
             className="todo-button"
-            onClick={() => onClickButton(message)}>+
+            onClick={() => onClickButton()}>+
         </button>
     );
 }

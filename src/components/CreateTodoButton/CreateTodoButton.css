@@ -1,23 +1,23 @@
 .todo-button {
-    background-color: #61DAFA;
-    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 50px;
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    font-weight: bold;
-    color: #FAFAFA;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: #61DAFA;
+    border-radius: 50%;
+    border: none;
+    bottom: 24px;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+    color: #FAFAFA;
+    cursor: pointer;
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
     height: 64px;
-    width: 64px;
-  
+    justify-content: center;
+    position: fixed;
+    right: 24px;
     transform: rotate(0);
     transition: .3s ease;
+    width: 64px;
+    z-index: 1
   }
   
   .todo-button:hover {

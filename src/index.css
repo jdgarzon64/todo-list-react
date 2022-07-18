@@ -14,7 +14,16 @@ code {
 }
 
 #root {
-  margin: 0 24px;
-  position: relative;
-  min-height: 100vh;
+  background-image: url('./styles/images/main-background.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.layer {
+  background-color: #4C0E5A;
+  /* background-color: darkslateblue; */
+  height: 100vh;
+  opacity: 50%;
+  position: fixed;
+  width: 100%;
 }
