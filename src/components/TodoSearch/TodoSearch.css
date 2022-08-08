@@ -4,13 +4,13 @@
     border: 2px solid coral;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
     color: tomato;
+    font-family: 'Permanent Marker', cursive;
     font-size: 30px;
     font-weight: bold;
     height: 64px;
     margin: 0 24px;
     text-align: center;
     width: calc(100% - 62px);
-    font-family: 'Permanent Marker', cursive;
   }
   
   .todo-search::placeholder {

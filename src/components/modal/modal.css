@@ -1,6 +1,7 @@
 .ModalBackground {
     align-items: center;
     background: rgba(32,35,41,.8);
+/*     background-color: brown; */
     color: white;
     display: flex;
     height: 100%;
