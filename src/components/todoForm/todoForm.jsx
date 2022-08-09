@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { TodoContext } from '../../todoContext';
+import { useKey } from '../../events/keyPressEvent';
 import './todoForm.css';
 
 function TodoForm() {
@@ -21,6 +22,9 @@ function TodoForm() {
         event.preventDefault();
         addTodo(newTodoValue);
     };
+
+    // closing the modal using ESCAPE key
+    useKey(27, onCancel);
 
     return (
         <form
