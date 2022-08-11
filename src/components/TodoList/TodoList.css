@@ -1,5 +1,17 @@
+.list-box {
+    background: navajowhite;
+    border-radius: 50px;
+    border: 2px solid coral;
+    box-shadow: 0px 5px 50px rgb(32 35 41 / 25%);
+    color: tomato;
+    font-family: 'Permanent Marker', cursive;
+    margin: 50px 24px 0;
+    overflow: hidden;
+    width: calc(100% - 62px);
+}
+
 .todo-list {
     margin: 0;
     padding: 0 0 56px 0;
     list-style: none;
-  }
+}

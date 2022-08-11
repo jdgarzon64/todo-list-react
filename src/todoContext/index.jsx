@@ -2,20 +2,6 @@ import React from 'react';
 
 import { useLocalStorage } from './useLocalStorage';
 
-const defaultTodos = [
-    {
-      text: 'Cocinar',
-      completed: true
-    },
-    {
-      text: 'Tomar el curso de intro a React',
-      completed: true
-    },
-    {
-      text: 'Limpiar el cuarto',
-      completed: false
-    }
-  ];
 const TodoContext = React.createContext();
 
 function TodoProvider (props) {
@@ -35,27 +21,29 @@ function TodoProvider (props) {
         todos :
         todos.filter(todo => todo.text.toLowerCase().includes(searchValue.toLowerCase()));
 
+      const nextKey = todos[todos.length - 1];
       const addTodo = (text) => {
         const newTodos = [...todos];
 
         newTodos.push({
           completed: false,
-          text: text
+          text: text,
+          key: parseInt(nextKey?.key || 0) + 1
         });
 
         saveTodos(newTodos);
       };
 
-      const completeTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text);
+      const completeTodo = (key) => {
+        const todoIndex = todos.findIndex(todo => todo.key === key);
         const newTodos = [...todos];
 
-        newTodos[todoIndex].completed = true;
+        newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
         saveTodos(newTodos);
       };
 
-      const deleteTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text);
+      const deleteTodo = (key) => {
+        const todoIndex = todos.findIndex(todo => todo.key === key);
         const newTodos = [...todos];
 
         newTodos.splice(todoIndex, 1);

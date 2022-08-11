@@ -30,26 +30,26 @@ function AppUi() {
         <div className='main-container'>
           <TodoCounter />
           <TodoSearch />
-                <TodoList>
-                { error && <p>hubo un error en la app</p> }
-                { loading && <p>cargando la app</p> }
-                { (!loading && !searchedTodos.length) && <p>crea tu primer TODO</p>}
-                { searchedTodos.map(todo => (
-                    <TodoItem
-                      key={ todo.text }
-                      text={ todo.text }
-                      completed={ todo.completed }
-                      onComplete={ () => completeTodo(todo.text) }
-                      onDelete={ () => deleteTodo(todo.text) }
-                    />
-                  ))
-                }
-              </TodoList>
-              { openModal && (
-                <Modal>
-                  <TodoForm />
-                </Modal>
-              )}
+          <TodoList>
+              { error && <p>hubo un error en la app</p> }
+              { loading && <p>cargando la app</p> }
+              { (!loading && !searchedTodos.length) && <p>crea tu primer TODO</p>}
+              { searchedTodos.map(todo => (
+                  <TodoItem
+                    key={ todo.key }
+                    text={ todo.text }
+                    completed={ todo.completed }
+                    onComplete={ () => completeTodo(todo.key) }
+                    onDelete={ () => deleteTodo(todo.key) }
+                  />
+                ))
+              }
+          </TodoList>
+            { openModal && (
+              <Modal>
+                <TodoForm />
+              </Modal>
+            )}
           <CreateTodoButton setOpenModal={ setOpenModal }/>
         </div>
       </>

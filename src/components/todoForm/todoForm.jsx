@@ -20,7 +20,11 @@ function TodoForm() {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodo(newTodoValue);
+
+        if (newTodoValue) {
+            addTodo(newTodoValue);
+            setNewTodoValue('');
+        }
     };
 
     // closing the modal using ESCAPE key

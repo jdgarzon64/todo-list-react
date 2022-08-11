@@ -10,9 +10,11 @@ function TodoList(props) {
         <section>
             {(
                 totalTodos > 0 ?
-                <ul className="todo-list">
-                    {props.children}
-                </ul>
+                <div className='list-box'>
+                    <ul className="todo-list">
+                        {props.children}
+                    </ul>
+                </div>
                 : null
             )}
         </section>
